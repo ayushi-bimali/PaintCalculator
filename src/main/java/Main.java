@@ -14,6 +14,8 @@ public class Main {
 
         for (int i = 1; i <= numRooms; i++) {
             System.out.println("Room " + i + ":");
+            System.out.println("How many coats of paint does this room need?");
+            int paintCoats = Integer.parseInt(scanner.next());
             System.out.println("How many walls are in this room?");
             int numWalls = Integer.parseInt(scanner.next());
             double roomArea = 0;
@@ -37,7 +39,7 @@ public class Main {
                 wallHeight = Double.parseDouble(scanner.next()) / 1000.0;
 
                 double wallArea = wallWidth * wallHeight;
-                roomArea += wallArea;
+                roomArea += wallArea * paintCoats;
             }
 
             System.out.println("Are you also painting the ceiling of this room? Type 1 for yes or 2 for no: ");
